@@ -1,0 +1,220 @@
+/* Reset styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* Sidebar */
+.sidebar {
+    position: fixed;
+    left: -250px;
+    top: 0;
+    width: 250px;
+    height: 100%;
+    background: #4A90E2;
+    color: #fff;
+    padding: 2em 1em;
+    transition: left 0.3s ease;
+    z-index: 1000;
+}
+
+.sidebar.active {
+    left: 0;
+}
+
+.sidebar h2 {
+    text-align: center;
+    margin-bottom: 1.5em;
+}
+
+.sidebar nav ul {
+    list-style: none;
+}
+
+.sidebar nav ul li {
+    margin: 1em 0;
+}
+
+.sidebar nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2em;
+    transition: color 0.3s;
+}
+
+.sidebar nav ul li a:hover {
+    color: #ffea00;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 1.5em;
+    background: none;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+}
+
+.open-btn {
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    font-size: 1.5em;
+    background: none;
+    border: none;
+    color: #4A90E2;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+.hero {
+    padding: 3em 1em;
+    text-align: center;
+    background: #333;
+    color:white;
+}
+
+.hero h2 {
+    font-size: 2.5em;
+    margin-bottom: 0.5em;
+}
+
+/* General styling for main content layout */
+.main-content {
+    margin-left: 0;
+    padding: 0 20px;
+    max-width: 1200px;
+    margin: auto;
+    transition: margin-left 0.3s ease;
+}
+
+.sidebar.active + .main-content {
+    margin-left: 250px;
+}
+
+/* Study Guides */
+.study-guides {
+    padding: 2em 0;
+    background: #fafafa;
+    text-align: center;
+}
+
+.study-guides h3 {
+    margin-bottom: 1em;
+}
+
+.guides-container {
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+    flex-wrap: wrap;
+    max-width: 100%; /* Ensures it scales properly within container */
+}
+
+.guide {
+    background: #fff;
+    border: 1px solid #ddd;
+    padding: 1em;
+    width: 220px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.guide:hover {
+    transform: translateY(-5px);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .guides-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .guide {
+        width: 90%;
+    }
+}
+
+
+/* Verse of the Day */
+.verse-of-the-day {
+    padding: 2em;
+    text-align: center;
+    background: #e2e8f0;
+}
+
+/* Study Guides */
+.study-guides {
+    padding: 2em;
+    background: #fafafa;
+}
+
+.guides-container {
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+    flex-wrap: wrap;
+}
+
+/* Devotions */
+.devotions {
+    padding: 2em;
+    background: #f0f4f8;
+    text-align: center;
+}
+
+.devotion-container {
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+    flex-wrap: wrap;
+}
+
+/* Reflections */
+.reflections {
+    padding: 2em;
+    text-align: center;
+    background: #f4f4f4;
+}
+
+/* Footer */
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1.5em;
+}
+
+/* Responsive Layouts */
+@media (max-width: 768px) {
+    .guides-container, .devotion-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hero h2 {
+        font-size: 2em;
+    }
+
+    .guide, .devotion {
+        width: 90%;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero h2 {
+        font-size: 1.8em;
+    }
+}

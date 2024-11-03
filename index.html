@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bible Study Website</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Sidebar Menu -->
+    <aside id="sidebar" class="sidebar">
+        <button class="close-btn" onclick="toggleSidebar()">×</button>
+        <h2>Bible Study</h2>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#verse">Verse of the Day</a></li>
+                <li><a href="#study-guides">Study Guides</a></li>
+                <li><a href="#devotions">Devotions</a></li>
+                <li><a href="#reflections">Reflections</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </aside>
+
+    <!-- Sidebar Toggle Button -->
+    <button class="open-btn" onclick="toggleSidebar()">☰</button>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <!-- Hero Section -->
+        <section id="home" class="hero">
+            <h2>Welcome to Bible Study</h2>
+            <p>Explore and deepen your understanding through study, devotions, and reflection.</p>
+        </section>
+
+        <!-- Study Guides Section -->
+        <section id="study-guides" class="study-guides">
+            <h3>Study Guides</h3>
+            <div class="guides-container">
+                <div class="guide">Guide 1</div>
+                <div class="guide">Guide 2</div>
+                <div class="guide">Guide 3</div>
+                <div class="guide">Guide 4</div>
+            </div>
+        </section>
+
+        <!-- Devotions Section -->
+        <section id="devotions" class="devotions">
+            <h3>Daily Devotions</h3>
+            <p>Find strength and peace in daily devotionals.</p>
+            <div class="devotion-container">
+                <div class="devotion">Devotion 1</div>
+                <div class="devotion">Devotion 2</div>
+                <div class="devotion">Devotion 3</div>
+            </div>
+        </section>
+
+        <!-- Reflections Section -->
+        <section id="reflections" class="reflections">
+            <h3>Reflections</h3>
+            <p>Read or share your reflections on today's verse and devotions.</p>
+        </section>
+
+        <!-- Footer Section -->
+        <footer id="contact">
+            <div class="footer-content">
+                <p>Contact us at: example@example.com</p>
+                <p>&copy; 2024 Bible Study</p>
+                <div class="social-links">
+                    <a href="#">Facebook</a> |
+                    <a href="#">Twitter</a> |
+                    <a href="#">Instagram</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- JavaScript for Sidebar Toggle -->
+    <script>
+        function toggleSidebar() {
+            const sidebar = document.getElementById("sidebar");
+            sidebar.classList.toggle("active");
+        }
+    </script>
+</body>
+</html>
